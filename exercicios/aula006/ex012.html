@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática</title>
+</head>
+<body>
+    <h1>Exemplo de prática</h1>
+     Onde você mora? <input type="text" name="nac" id="nac">
+     <input type="button" value="Verificar" onclick="calcular()">
+     <div id="nacres"></div>
+
+     <script>
+        function calcular(){
+            var nac = window.document.querySelector('input#nac').value
+            var nacres = window.document.querySelector( 'div#nacres')
+            if (nac == 'brasil'){
+                nacres.innerHTML = "Você é Brasileiro"
+            } else if (nac == 'Americano') {
+                 nacres.innerHTML = "Você é Americano"
+            } else{
+                nacres.innerHTML = " você não é Brasileiro nem Americano"
+            }
+        }
+       
+        
+     </script>
+</body>
+</html>
