@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body{
+            background-color: darkorchid;
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        document.write(`Olá <strong>${nome}</strong>, seu nome tem ${nome.length} letras <br/>`)
+        document.write(`Seu nome em maiúsculo é${nome.toUpperCase()}<br/>`)
+        document.write(`Seu nome em minúsculo é ${nome.toLowerCase()}`)
+        /* significa:  'escreva no documento'
+        toFixed(2): método de formatação de números.
+         n1.toLocaleString('PT-BR', {style: 'currency', currency: 'BRL'}): para mostrar em valor monetário.
+        */
+    </script>
+</body>
+</html>
