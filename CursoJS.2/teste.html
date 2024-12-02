@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste com DOM</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            background:linear-gradient(rgba(0, 0, 255, 0.445), rgba(0, 0, 0, 0)) ;
+            height: 80px;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: aliceblue;
+            
+        }
+        div#botoes{
+            background-color: rgba(0, 0, 255, 0.288);
+            height: 100px;
+            width: 200px;
+            margin: auto;
+            padding: 50px;
+            border-radius: 35px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 10px;
+        }
+        div#res{
+            background-color: rgba(0, 0, 255, 0.555);
+            height: 100px;
+            width: 250px;
+            border-radius: 25px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin:auto;
+            padding: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+
+        <div id="botoes">
+            <input type="number" name="txt1" id="txt1">
+            <span style="display: block;">+</span>
+            <input type="number" name="txt2" id="txt2">
+            <input style="margin: 10px;" id="botaosomar" type="button" value="somar">
+        </div>
+        <div id="res">
+             Resultado
+        </div>
+        <script>
+             let a = window.document.getElementById('botaosomar')
+             a.addEventListener('click', somar)
+             function somar(){
+                let tn1 = window.document.getElementById('txt1')
+                let tn2 = window.document.getElementById('txt2')
+                let res = window.document.getElementById('res')
+                let n1 = Number(tn1.value)
+                let n2 = Number(tn2.value)
+                let r = n1 + n2
+                res.innerHTML = `A soma entre ${n1} e ${n2} é <strong>${r}</strong>`
+                res.style.color = 'white'
+         }
+         let cor = window.document.getElementById('botaosomar')
+         cor.addEventListener('mouseenter', entrar)
+         cor.addEventListener('mouseout', sair)
+         function entrar(){
+            cor.style.backgroundColor = 'rgba(0, 0, 255, 0.288)'
+         }
+         function sair(){
+            cor.style.backgroundColor = 'white'
+         }
+        
+        </script>
+    
+</body>
+</html>
