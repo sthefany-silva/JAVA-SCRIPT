@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: rgba(14, 14, 43, 0.39);
+    }
+    h1{
+        text-align: center;
+        background:linear-gradient( rgba(14, 14, 43, 0.39), rgba(0, 0, 0, 0));
+        height: 60px;
+        padding: 10px;
+    }
+    div#res{
+        background-color: rgba(42, 42, 73, 0.247);
+        height: 100px;
+        width: 150px;
+        text-align: center;
+        margin: auto;
+        margin-top: 20px;
+        border-radius: 7px;
+        color: aliceblue;
+        padding: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 20px;
+    }
+    section{
+        background-color: rgba(39, 39, 61, 0.356);
+        color: aliceblue;
+        height: 70px;
+        width: 200px;
+        padding: 50px;
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 10px;
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>Sistema de multas</h1>
+    <section>
+        Velocidade do carro:<input style="margin: 8px;" type="number" name="txtvel" id="txtvel">
+        <input type="button" value="Verificar" onclick="calcular()">
+    </section>
+    <div id="res">
+
+    </div>
+
+<script>
+    function calcular() {
+        var txtv = window.document.querySelector('input#txtvel')
+        var res = window.document.querySelector('div#res')
+        var vel = Number(txtv.value)
+        res.innerHTML = `Sua velocidade é de ${vel} km/h`
+        if(vel > 60){
+            res.innerHTML+=' <p>Você excedeu o limite de velocidade. MULTADO!</p>'
+        }
+    }
+
+</script>
+</body>
+</html>
