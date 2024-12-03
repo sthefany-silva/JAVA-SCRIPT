@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de JavaScript</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <div>
+        <input type="number" name="km" id="km">
+        <input id="botaosomar" type="button" value="Calcular" onclick="calcular()">
+    </div>
+    <div id="res">
+        
+    </div>
+    <script>
+       
+        function calcular(){
+            let kmn = window.document.getElementById('km')
+            let res = window.document.getElementById('res')
+            let numb = Number(kmn.value)
+             res.innerHTML = `Sua velocidade é de ${numb} km/h`
+            if(numb > 50){
+                res.innerHTML = '<p>Você ultrapassou o limite de velocidade!</p>'
+            }
+        }
+           
+            
+       
+    </script>
+</body>
+</html>
