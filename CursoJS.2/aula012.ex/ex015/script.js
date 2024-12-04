@@ -39,7 +39,7 @@
             //idoso
             img.setAttribute('src', 'idosa.mulher.jpg')
         }
-    }
+    } 
    
    }
     res.style.textAlign = 'center'
