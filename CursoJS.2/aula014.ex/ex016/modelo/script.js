@@ -5,7 +5,6 @@
  let res = document.getElementById('res')
 
  if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
-    
     res.innerHTML = 'Impossível contar!'
  } else {
     res.innerHTML = 'contando: <br>'
